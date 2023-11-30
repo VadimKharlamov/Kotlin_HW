@@ -4,9 +4,14 @@ import java.lang.Math.sqrt
 fun askForInput() {
     println ("Введите ваше ФИО через пробел")
     val data = readln().split(" ").toTypedArray()
-    println("Фамилия: " + data[0])
-    println("Имя: " + data[1])
-    println("Отчество " + data[2])
+    if (data.size == 3) {
+        println("Фамилия: " + data[0])
+        println("Имя: " + data[1])
+        println("Отчество " + data[2])
+    }
+    else {
+        println("Неверный формат ввода!")
+    }
 }
 
 /**Задание 2: Функция, вычисляющая и возвращающая корни квадратного уравнения. (1 балл) */
