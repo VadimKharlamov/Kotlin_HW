@@ -1,0 +1,5 @@
+package dependencyInversionPrinciple
+
+interface WeatherAlert {
+    fun generateWeatherAlert(weatherConditions: String): String
+}
