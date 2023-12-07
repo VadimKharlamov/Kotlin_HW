@@ -1,0 +1,14 @@
+package dependencyInversionPrinciple
+
+import dependencyInversionPrinciple.Emailer
+import dependencyInversionPrinciple.Phone
+
+class WeatherTracker (private var conditions: String, private val source: WeatherAlert) {
+
+    fun setCurrentConditions(weatherDescription: String) {
+        this.conditions = weatherDescription
+        val alert: String = source.generateWeatherAlert(conditions)
+        print(alert)
+    }
+
+}
